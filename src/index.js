@@ -1,5 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
+import StrictMode from 'react';
 import './index.css';
 import Card from './Card';
 import 'tachyons';
@@ -7,6 +8,7 @@ import {robots} from './robots'
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
+    <StrictMode>
 <div>
 <Card id= {robots[0].id} name={robots[0].name} email={robots[0].email} />
 <Card id= {robots[1].id} name={robots[1].name} email={robots[1].email}/>
@@ -19,5 +21,6 @@ root.render(
 <Card id= {robots[8].id} name={robots[8].name} email={robots[8].email}/>
 <Card id= {robots[9].id} name={robots[9].name} email={robots[9].email}/>
 </div>
+</StrictMode>
 );
 
