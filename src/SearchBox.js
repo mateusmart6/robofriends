@@ -1,12 +1,16 @@
 import React from 'react';
 import 'tachyons';
 
-const SearchBox = () => {
+const SearchBox = ({searchfield, searchChange}) => {
    return (
-    <input type='search' 
-    placeholder='search robots' 
-    className='bg-lightest-blue b--green pa3 ba tc'/>  
-   ) 
+    <div className='pa2'>
+      <input type='search' 
+      placeholder='search robots' 
+      className='bg-lightest-blue b--green pa3 ba tc'
+      onChange={searchChange}
+    />  
+    </div>
+   ); 
 }
 
 export default SearchBox; 
